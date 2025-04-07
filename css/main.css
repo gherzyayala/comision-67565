@@ -1,0 +1,321 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom properties */
+:root {
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --primario: #070709;
+    --secundario: #767787;
+}
+
+/* Estilos para adaptar a múltiples dispositivos */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px; /* 1 rem = 10px */
+    font-family: "Krub", sans-serif;
+    font-weight: normal;
+}
+
+
+/* estilos basicos generales */
+body{
+    background-color: var(--primario);
+}
+
+/* estilos de mobile */
+
+/* estilos de header */
+/* header{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 40px;
+} */
+
+header nav ul {
+    font-size: 1rem;
+    list-style: none;
+    display: flex;
+    gap: 8px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--blanco);
+}
+
+header .logo{
+    width: 25%;
+    height: 30%;
+}
+
+/* Estilos de main */
+main {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+main h1 {
+    color: var(--secundario);
+    text-transform: uppercase;
+}
+
+main p{
+    font-size: 1.5rem;
+    justify-content: center;
+    padding: 10px;
+    color: whitesmoke;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+main ul {
+    display: flex;
+    font-size: 1.5rem;
+    list-style: none;
+    justify-content: center;
+    margin: 15px;
+}
+
+main ul li{
+    justify-items: center;
+}
+
+main ul a{
+    display: block;
+    background-color: var(--secundario);
+    text-decoration: none;
+    color: var(--primario);
+    font-weight: bold;
+    padding: 2px;
+    margin: 2px;
+    border-radius: 10%;
+    width: 50%;
+}
+
+main ul a:hover{
+    background-color: transparent;
+    border: 2px solid var(--blanco);
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+main h2 {
+    color: var(--secundario);
+    margin-top: 30px;
+}
+
+
+
+main .beneficio-dos, main .beneficio-cuatro{
+    display: none;
+}
+
+main div p{
+    font-size: 1.3rem;
+}
+
+main div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    gap: 15px;
+    padding: 1rem;
+}
+
+main img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    gap: 15px;
+    padding: 1rem;
+}
+
+main div{
+    margin: 1rem;
+}
+
+main div a{
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: var(--secundario);
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+main div a:hover{
+    background-color: transparent;
+    border: 2px solid var(--blanco);
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+main div svg{
+    background-color: var(--secundario);
+}
+
+.marcas svg{
+    background-color: var(--secundario);
+}
+
+/* Estilos de footer */
+
+.footer{
+    display: block;
+    color: var(--blanco);
+}
+
+footer div {
+    text-align: center;
+    font-size: 1.5rem;
+    justify-content: center;
+}
+
+footer .logo{
+    width: 25%;
+    height: 30%;
+}
+
+footer div a {
+    text-decoration: none;
+    color: var(--secundario);
+    font-weight: bold;
+}
+
+footer div a:hover{
+    background-color: transparent;
+    border: 2px solid var(--blanco);
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+/* Estilos de formularios */
+.formulario legend{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.formulario{
+    margin: 0 auto;
+    background-color: var(--oscuro);
+    width: min(60rem, 100%);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+
+
+.campo:nth-child(7){
+    grid-column: 1 / 3;
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.enviar{
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: var(--secundario);
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+.enviar:hover{
+    background-color: transparent;
+    border: 2px solid var(--blanco);
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+
+/* terminos y condiciones */
+main div section svg{
+    width: 30%;
+    height: 4rem;
+}
+
+.terminos-condiciones{
+    margin: 1rem;
+}
+
+h3{
+    color: var(--secundario);
+}
+
+/* estilos de desktop */
+@media screen and (min-width: 1024px){
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+    }
+
+    .beneficios{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    main .beneficio-dos, main .beneficio-cuatro{
+        display: block;
+    }
+
+    main ul a{
+        margin: 2px;
+        border-radius: 5%;
+        width: 80%;
+    }
+
+    .marcas{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    .terminos-condiciones{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+}
